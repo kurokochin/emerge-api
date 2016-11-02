@@ -11,7 +11,7 @@ function emergencyHandler (req, res) {
   if (req.params.type in data) {
     return res.status(200).send(data[req.params.type]);
   }
-  return res.status(404).send({});
+  return res.status(404);
 }
 
 module.exports = emergencyHandler;
